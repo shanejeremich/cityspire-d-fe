@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/cityspire-d-fe/static/css/main.a1d5ee50.chunk.css",
+    "main.js": "/cityspire-d-fe/static/js/main.3c9ed086.chunk.js",
+    "main.js.map": "/cityspire-d-fe/static/js/main.3c9ed086.chunk.js.map",
+    "runtime-main.js": "/cityspire-d-fe/static/js/runtime-main.38055ad8.js",
+    "runtime-main.js.map": "/cityspire-d-fe/static/js/runtime-main.38055ad8.js.map",
+    "static/css/2.63eba667.chunk.css": "/cityspire-d-fe/static/css/2.63eba667.chunk.css",
+    "static/js/2.438694a6.chunk.js": "/cityspire-d-fe/static/js/2.438694a6.chunk.js",
+    "static/js/2.438694a6.chunk.js.map": "/cityspire-d-fe/static/js/2.438694a6.chunk.js.map",
+    "index.html": "/cityspire-d-fe/index.html",
+    "precache-manifest.4590e59d7d3921272730a96d6798469e.js": "/cityspire-d-fe/precache-manifest.4590e59d7d3921272730a96d6798469e.js",
+    "service-worker.js": "/cityspire-d-fe/service-worker.js",
+    "static/css/2.63eba667.chunk.css.map": "/cityspire-d-fe/static/css/2.63eba667.chunk.css.map",
+    "static/css/main.a1d5ee50.chunk.css.map": "/cityspire-d-fe/static/css/main.a1d5ee50.chunk.css.map",
+    "static/js/2.438694a6.chunk.js.LICENSE.txt": "/cityspire-d-fe/static/js/2.438694a6.chunk.js.LICENSE.txt",
+    "static/media/okta-sign-in.min.css": "/cityspire-d-fe/static/media/yubikeyDemo.f10c9db1.png",
+    "static/media/RenderLandingPage.css": "/cityspire-d-fe/static/media/city.c59b4903.jpg",
+    "static/media/cityspire.svg": "/cityspire-d-fe/static/media/cityspire.dc09b532.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38055ad8.js",
+    "static/css/2.63eba667.chunk.css",
+    "static/js/2.438694a6.chunk.js",
+    "static/css/main.a1d5ee50.chunk.css",
+    "static/js/main.3c9ed086.chunk.js"
+  ]
+}
