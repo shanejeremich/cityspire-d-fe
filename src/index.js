@@ -40,7 +40,7 @@ import './styles/index.css';
 
 ReactDOM.render(
   <StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <LocationContextProvider>
         <App />
       </LocationContextProvider>
