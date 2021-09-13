@@ -1,61 +1,86 @@
+// import { herokuAxios, userAvatarAxios } from './axios';
 import axios from 'axios';
 
-// we will define a bunch of API calls here.
-const apiUrl = `${process.env.REACT_APP_API_URI}/profiles`;
-const userPicUrl = `https://randomuser.me/api/`;
-
-const sleep = time =>
-  new Promise(resolve => {
-    setTimeout(resolve, time);
-  });
-
-const getExampleData = () => {
-  return axios
-    .get(`https://jsonplaceholder.typicode.com/photos?albumId=1`)
-    .then(response => response.data);
+/**
+ * HELPER FUNCTIONS
+ */
+export const fetchData = async url => {
+  if (!url) {
+    throw new Error('No URL provided');
+  }
+  try {
+    const res = await herokuAxios.get(url);
+    return res.data;
+  } catch (err) {
+    return `fetchData Error: ${err}`;
+  }
 };
 
+// If User is Authenticated
+// Then get data
 const getAuthHeader = authState => {
   if (!authState.isAuthenticated) {
     throw new Error('Not authenticated');
   }
   return { Authorization: `Bearer ${authState.idToken}` };
 };
-
-const getDSData = (url, authState) => {
-  // here's another way you can compose together your API calls.
-  // Note the use of GetAuthHeader here is a little different than in the getProfileData call.
+export const fetchAuthData = async (url, authState) => {
   const headers = getAuthHeader(authState);
   if (!url) {
     throw new Error('No URL provided');
   }
-  return axios
-    .get(url, { headers })
-    .then(res => JSON.parse(res.data))
-    .catch(err => err);
-};
-
-const apiAuthGet = authHeader => {
-  return axios.get(apiUrl, { headers: authHeader });
-};
-
-const getProfileData = authState => {
   try {
-    return apiAuthGet(getAuthHeader(authState)).then(response => response.data);
-  } catch (error) {
-    return new Promise(() => {
-      console.log(error);
-      return [];
-    });
+    const res = await herokuAxios.get(url, { headers });
+    return res.data;
+  } catch (err) {
+    return `fetchAuthData Error: ${err}`;
   }
 };
 
-// get user profile picture
+// Authentication Helper function
+export async function checkAuthentication(
+  authState,
+  authService,
+  userInfo,
+  setUserInfo
+) {
+  const authenticated = await authState.isAuthenticated;
+  if (authenticated === authState.isAuthenticated) {
+    if (authenticated && !userInfo) {
+      const info = await authService.getUser();
+      setUserInfo(info);
+    }
+  } else {
+    return setUserInfo(null);
+  }
+}
+
+// Get user profile picture
 // replace randomuser.me API with backend once working
-const userAvatar = async () => {
-  return axios
-    .get(`https://api.allorigins.win/raw?url=` + userPicUrl)
-    .then(res => res.data);
+export const userAvatar = async () => {
+  return userAvatarAxios.get().then(res => res.data);
 };
 
-export { sleep, getExampleData, getProfileData, getDSData, userAvatar };
+export const sleep = time =>
+  new Promise(resolve => {
+    setTimeout(resolve, time);
+  });
+
+/**
+ * AXIOS CALLS
+ */
+// Main Axios
+export const mainAxios = axios.create({
+  baseURL: `${process.env.REACT_APP_API_URI}`,
+});
+
+// For All calls to the heroku API
+export const herokuAxios = axios.create({
+  baseURL: 'https://cityspire-d-be.herokuapp.com',
+});
+
+// Calls to Random User API
+// Replace once user profile pic is updated on backend
+export const userAvatarAxios = axios.create({
+  baseURL: 'https://api.allorigins.win/raw?url=https://randomuser.me/api/',
+});

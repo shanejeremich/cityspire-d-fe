@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import RenderDropdownMenu from './RenderDropdownMenu';
-import { useDetectOutsideClick } from '../../../common';
+import { useDetectOutsideClick } from '../../../hooks';
 
 import './DropdownMenu.css';
 

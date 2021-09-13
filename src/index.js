@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
@@ -9,52 +9,69 @@ import {
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 import { config } from './utils/oktaConfig';
 
-import { NotFoundPage } from './components/pages/NotFound';
-import { ExampleListPage } from './components/pages/ExampleList';
-import { HomePage } from './components/pages/Home';
-import { ProfileListPage } from './components/pages/ProfileList';
-import { LoginPage } from './components/pages/Login';
-import { ExampleDataViz } from './components/pages/ExampleDataViz';
-import { LandingPage } from './components/pages/Landing';
-import { Mapbox } from './components/pages/Mapbox';
+import {
+  LOGIN,
+  ROOT,
+  MAP,
+  HOME,
+  EXAMPLE_LIST,
+  FAVORITES,
+  PROFILE_LIST,
+  DATA_VIS,
+  CALLBACK_PATH,
+} from './api/CONSTANTS';
+
+import {
+  LoginPage,
+  LandingPage,
+  Mapbox,
+  HomePage,
+  ExampleListPage,
+  Favorites,
+  ProfileListPage,
+  ExampleDataViz,
+} from './components/pages';
+import { Navbar, NotFoundPage } from './components/layout';
 import { LoadingComponent } from './components/common';
-import { Navbar } from './components/layout/Nav';
-import FavoritesContainer from './components/pages/Favorite/FavoriteContainer.js';
+
+import { LocationContextProvider } from './state/contexts/LocationContext';
 
 import './styles/index.css';
-const CALLBACK_PATH = '/implicit/callback';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <Router>
-      <App />
+      <LocationContextProvider>
+        <App />
+      </LocationContextProvider>
     </Router>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 );
 
 function App() {
   const history = useHistory();
   const authHandler = () => {
-    history.push('/login');
+    history.push(LOGIN);
   };
 
   return (
     <Security {...config} onAuthRequired={authHandler}>
       <Navbar />
+
       <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/map" component={Mapbox} />
+        <Route path={ROOT} exact component={LandingPage} />
+        <Route path={LOGIN} component={LoginPage} />
+        <Route path={MAP} component={Mapbox} />
 
         <SecureRoute
-          path="/home"
+          path={HOME}
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
-        <SecureRoute path="/example-list" component={ExampleListPage} />
-        <SecureRoute path="/favorites" component={FavoritesContainer} />
-        <SecureRoute path="/profile-list" component={ProfileListPage} />
-        <SecureRoute path="/datavis" component={ExampleDataViz} />
+        <SecureRoute path={EXAMPLE_LIST} component={ExampleListPage} />
+        <SecureRoute path={FAVORITES} component={Favorites} />
+        <SecureRoute path={PROFILE_LIST} component={ProfileListPage} />
+        <SecureRoute path={DATA_VIS} component={ExampleDataViz} />
 
         <Route path={CALLBACK_PATH} component={LoginCallback} />
         <Route component={NotFoundPage} />

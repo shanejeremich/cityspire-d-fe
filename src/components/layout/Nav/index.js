@@ -1,4 +1,2 @@
-import NavbarContainer from './Navbar/NavbarContainer';
-import DropdownMenuContainer from './DropdownMenu/DropdownMenuContainer';
-
-export { NavbarContainer as Navbar, DropdownMenuContainer as DropdownMenu };
+export { default as Navbar } from './Navbar/NavbarContainer';
+export { default as DropdownMenu } from './DropdownMenu/DropdownMenuContainer';

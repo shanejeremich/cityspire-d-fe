@@ -42,11 +42,12 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.menu li a {
+.menu-item {
   text-decoration: none;
   color: #333333;
   padding: 0.9375rem 1.25rem;
   display: block;
+  cursor: pointer;
 }
 
 .menu-trigger {

@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useOktaAuth } from '@okta/okta-react';
 
 import RenderNavbar from './RenderNavbar';
-import { checkAuthentication } from '../../../common';
-import { userAvatar } from '../../../../api';
+import { userAvatar, checkAuthentication } from '../../../../api';
 
 import './NavbarContainer.css';
 

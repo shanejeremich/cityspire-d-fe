@@ -1,7 +1,7 @@
 /*eslint no-unused-vars: 0 */
 import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
-import { getDSData } from '../../../api';
+import { fetchAuthData } from '../../../api';
 
 const initialState = {
   data: [],
@@ -19,7 +19,7 @@ function DataViz(props) {
 
   useEffect(() => {
     function fetchDSData() {
-      getDSData(props.url, props.authState)
+      fetchAuthData(props.url, props.authState)
         .then(res => {
           setData(res);
         })
