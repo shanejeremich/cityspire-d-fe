@@ -30,28 +30,32 @@ function RenderDropdownMenu({
           >
             <ul>
               <li>
-                <Link to="/map" onClick={activeClick}>
+                <Link to="/map" className="menu-item" onClick={activeClick}>
                   <FontAwesomeIcon icon={faSearchLocation} />
                   &nbsp;&nbsp; Search City
                 </Link>
               </li>
               <li>
-                <Link to="/home" onClick={activeClick}>
+                <Link to="/home" className="menu-item" onClick={activeClick}>
                   <FontAwesomeIcon icon={faUserCircle} />
                   &nbsp;&nbsp; Profile
                 </Link>
               </li>
               <li>
-                <Link to="/favorites" onClick={activeClick}>
+                <Link
+                  to="/favorites"
+                  className="menu-item"
+                  onClick={activeClick}
+                >
                   <FontAwesomeIcon icon={faHeart} />
                   &nbsp;&nbsp; Favorites
                 </Link>
               </li>
               <li>
-                <Link onClick={logout}>
+                <div className="menu-item" onClick={logout}>
                   <FontAwesomeIcon icon={faSignOutAlt} />
                   &nbsp;&nbsp; Logout
-                </Link>
+                </div>
               </li>
             </ul>
           </div>

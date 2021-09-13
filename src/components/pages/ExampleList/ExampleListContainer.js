@@ -1,12 +1,18 @@
 import React from 'react';
-
-import { getExampleData } from '../../../api';
+import axios from 'axios';
+import RenderExampleListPage from './RenderExampleListPage';
 
 import { List } from '../../common';
-import RenderExampleListPage from './RenderExampleListPage';
 
 // Here is an example of using our reusable List component to display some list data to the UI.
 const ExampleList = () => {
+  const url = 'https://jsonplaceholder.typicode.com/photos?albumId=1';
+
+  const getExampleData = async () => {
+    const res = await axios(url);
+    return res.data;
+  };
+
   return (
     <List
       // Here we are passing our Axios request helper function as a callback.

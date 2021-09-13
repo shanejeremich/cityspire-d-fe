@@ -1,3 +1,1 @@
-import DataVizContainer from './ExampleDataVizContainer';
-
-export { DataVizContainer as ExampleDataViz };
+export { default as ExampleDataViz } from './ExampleDataVizContainer';
