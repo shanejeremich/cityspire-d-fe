@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { ROOT } from '../../../api/CONSTANTS';
 
 const RenderProfileListPage = props => (
   <div>
     <p>
-      <Link to="/">Home</Link>
+      <Link to={ROOT}>Home</Link>
     </p>
     {props.data.map(item => (
       <figure key={item.id}>

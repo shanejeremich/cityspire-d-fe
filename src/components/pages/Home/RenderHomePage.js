@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { DATA_VIS, EXAMPLE_LIST, PROFILE_LIST } from '../../../api/CONSTANTS';
 import { Button } from '../../common';
 
 function RenderHomePage(props) {
@@ -13,13 +14,13 @@ function RenderHomePage(props) {
           approach components */}
         </p>
         <p>
-          <Link to="/profile-list">Profiles Example</Link>
+          <Link to={PROFILE_LIST}>Profiles Example</Link>
         </p>
         <p>
-          <Link to="/example-list">Example List of Items</Link>
+          <Link to={EXAMPLE_LIST}>Example List of Items</Link>
         </p>
         <p>
-          <Link to="/datavis">Data Visualizations Example</Link>
+          <Link to={DATA_VIS}>Data Visualizations Example</Link>
         </p>
         <p>
           <Button

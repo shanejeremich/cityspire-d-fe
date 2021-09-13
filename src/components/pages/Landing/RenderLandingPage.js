@@ -5,6 +5,7 @@ import { faSearchLocation } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 import './RenderLandingPage.css';
+import { MAP } from '../../../api/CONSTANTS';
 
 function RenderLandingPage() {
   return (
@@ -12,7 +13,7 @@ function RenderLandingPage() {
       <section className="hero-img">
         <div className="search-city-bg">
           <h1>Welcome To CitySpire</h1>
-          <Link to="/map">
+          <Link to={MAP}>
             <div className="search-city-btn-container">
               <span className="fa-icon-container">
                 <FontAwesomeIcon className="fa-icon" icon={faSearchLocation} />
@@ -22,8 +23,7 @@ function RenderLandingPage() {
           </Link>
         </div>
       </section>
-      <section className="hero-container">
-      </section>
+      <section className="hero-container"></section>
     </>
   );
 }

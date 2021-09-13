@@ -7,6 +7,7 @@ import {
   faUserCircle,
   faSearchLocation,
 } from '@fortawesome/free-solid-svg-icons';
+import { FAVORITES, HOME, MAP } from '../../../../api/CONSTANTS';
 
 function RenderDropdownMenu({
   userInfo,
@@ -30,20 +31,20 @@ function RenderDropdownMenu({
           >
             <ul>
               <li>
-                <Link to="/map" className="menu-item" onClick={activeClick}>
+                <Link to={MAP} className="menu-item" onClick={activeClick}>
                   <FontAwesomeIcon icon={faSearchLocation} />
                   &nbsp;&nbsp; Search City
                 </Link>
               </li>
               <li>
-                <Link to="/home" className="menu-item" onClick={activeClick}>
+                <Link to={HOME} className="menu-item" onClick={activeClick}>
                   <FontAwesomeIcon icon={faUserCircle} />
                   &nbsp;&nbsp; Profile
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/favorites"
+                  to={FAVORITES}
                   className="menu-item"
                   onClick={activeClick}
                 >
