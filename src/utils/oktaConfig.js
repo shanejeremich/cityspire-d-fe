@@ -1,4 +1,6 @@
-const REDIRECT_URI = `${window.location.origin}/cityspire-d-fe/`;
+import { CALLBACK_PATH } from '../api/CONSTANTS';
+
+const REDIRECT_URI = `${window.location.origin}${CALLBACK_PATH}`;
 
 const config = {
   issuer: process.env.REACT_APP_OKTA_ISSUER_URI,
