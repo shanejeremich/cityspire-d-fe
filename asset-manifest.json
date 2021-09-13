@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cityspire-d-fe/static/css/main.a1d5ee50.chunk.css",
-    "main.js": "/cityspire-d-fe/static/js/main.f2b3488c.chunk.js",
-    "main.js.map": "/cityspire-d-fe/static/js/main.f2b3488c.chunk.js.map",
+    "main.js": "/cityspire-d-fe/static/js/main.55ba8139.chunk.js",
+    "main.js.map": "/cityspire-d-fe/static/js/main.55ba8139.chunk.js.map",
     "runtime-main.js": "/cityspire-d-fe/static/js/runtime-main.38055ad8.js",
     "runtime-main.js.map": "/cityspire-d-fe/static/js/runtime-main.38055ad8.js.map",
     "static/css/2.63eba667.chunk.css": "/cityspire-d-fe/static/css/2.63eba667.chunk.css",
     "static/js/2.438694a6.chunk.js": "/cityspire-d-fe/static/js/2.438694a6.chunk.js",
     "static/js/2.438694a6.chunk.js.map": "/cityspire-d-fe/static/js/2.438694a6.chunk.js.map",
     "index.html": "/cityspire-d-fe/index.html",
-    "precache-manifest.48e938e9ee08fb9cebcdd5ed60dba9a2.js": "/cityspire-d-fe/precache-manifest.48e938e9ee08fb9cebcdd5ed60dba9a2.js",
+    "precache-manifest.e7d8da2e2bbb40d09dda03b4c556f530.js": "/cityspire-d-fe/precache-manifest.e7d8da2e2bbb40d09dda03b4c556f530.js",
     "service-worker.js": "/cityspire-d-fe/service-worker.js",
     "static/css/2.63eba667.chunk.css.map": "/cityspire-d-fe/static/css/2.63eba667.chunk.css.map",
     "static/css/main.a1d5ee50.chunk.css.map": "/cityspire-d-fe/static/css/main.a1d5ee50.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.63eba667.chunk.css",
     "static/js/2.438694a6.chunk.js",
     "static/css/main.a1d5ee50.chunk.css",
-    "static/js/main.f2b3488c.chunk.js"
+    "static/js/main.55ba8139.chunk.js"
   ]
 }

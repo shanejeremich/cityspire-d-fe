@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cityspire-d-fe/precache-manifest.48e938e9ee08fb9cebcdd5ed60dba9a2.js"
+  "/cityspire-d-fe/precache-manifest.e7d8da2e2bbb40d09dda03b4c556f530.js"
 );
 
 self.addEventListener('message', (event) => {
