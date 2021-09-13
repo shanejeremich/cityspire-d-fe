@@ -1,4 +1,4 @@
-const REDIRECT_URI = `${window.location.origin}/cityspire-d-fe/login/callback`;
+const REDIRECT_URI = `${window.location.origin}/cityspire-d-fe/`;
 
 const config = {
   issuer: process.env.REACT_APP_OKTA_ISSUER_URI,
