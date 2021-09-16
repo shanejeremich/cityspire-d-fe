@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90298bdf8b4fced9e0c5bb1da43fc904",
+    "revision": "8c1b1f8696de615a77802cd8e0761ecb",
     "url": "/cityspire-d-fe/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cityspire-d-fe/static/css/2.63eba667.chunk.css"
   },
   {
-    "revision": "2e3bce8703ba348810b6",
+    "revision": "63dc8f10e31f6016d415",
     "url": "/cityspire-d-fe/static/css/main.a1d5ee50.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cityspire-d-fe/static/js/2.438694a6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e3bce8703ba348810b6",
-    "url": "/cityspire-d-fe/static/js/main.510cb5b6.chunk.js"
+    "revision": "63dc8f10e31f6016d415",
+    "url": "/cityspire-d-fe/static/js/main.4d63ef87.chunk.js"
   },
   {
     "revision": "a56da8ea5a74fa9f9243",
