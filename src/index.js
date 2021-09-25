@@ -1,11 +1,8 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  useHistory,
-  Switch,
-} from 'react-router-dom';
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
+import { Route, useHistory, Switch } from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 import { config } from './utils/oktaConfig';
 
@@ -38,9 +35,11 @@ import { LocationContextProvider } from './state/contexts/LocationContext';
 
 import './styles/index.css';
 
+const history = createBrowserHistory();
+
 ReactDOM.render(
   <StrictMode>
-    <Router>
+    <Router history={history}>
       <LocationContextProvider>
         <App />
       </LocationContextProvider>
