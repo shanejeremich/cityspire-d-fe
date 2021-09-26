@@ -48,6 +48,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+console.log('test');
+
 function App() {
   const history = useHistory();
   const authHandler = () => {
