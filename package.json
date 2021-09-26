@@ -2,7 +2,7 @@
   "name": "cityspire-d-fe",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://cityspire.shanejeremich.com",
+  "homepage": "https://cityspire.netlify.app/",
   "license": "MIT",
   "repository": "github:sjeremich23/cityspire-d-fe",
   "dependencies": {

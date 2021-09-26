@@ -1,7 +1,8 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch } from 'react-router';
+import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
+import { Route, useHistory, Switch } from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 import { config } from './utils/oktaConfig';
 
@@ -48,6 +49,7 @@ ReactDOM.render(
 );
 
 function App() {
+  const history = useHistory();
   const authHandler = () => {
     history.push(LOGIN);
   };
