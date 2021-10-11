@@ -10,6 +10,13 @@ The future of this app will be an app that will analyze data from cities such as
 - React Router not working correctly with manual typing of URL/refresh coming back with 404
 - Okta authentication not working because of the previous bug
 
+<br>
+
+![Cityspire](/public/images/main.jpg)
+![Cityspire](/public/images/map.jpg)
+
+<br>
+
 ## Contributors
 
 |                                        [Shane Jeremich](https://github.com/sjeremich23)                                        |
