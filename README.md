@@ -40,7 +40,7 @@ The future of this app will be an app that will analyze data from cities such as
 ### Key Features
 
 - Search for any city in the United States
-- Integration of Okta API for Login/Sign-Up
+- Integration of Okta API for Authentication and Users
 - Integration of Mapbox-GL API
 - Mapbox Geocoding
 
