@@ -44,9 +44,10 @@ The future of this app will be an app that will analyze data from cities such as
 - Integration of Mapbox-GL API
 - Mapbox Geocoding
 
-#### Front end deployed to [Cityspire](https://cityspire.shanejeremich.com/)
+### Front end deployed to `cityspire.shanejeremich.com`
+> [Cityspire](https://cityspire.shanejeremich.com/)
 
-#### Back end still under development
+### Back end still `under development`
 
 # APIs
 
