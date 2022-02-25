@@ -1,3 +1,3 @@
-import { LocationContext } from './contexts';
+import { LocationContext, LocationContextProvider } from "./contexts";
 
-export { LocationContext };
+export { LocationContext, LocationContextProvider };

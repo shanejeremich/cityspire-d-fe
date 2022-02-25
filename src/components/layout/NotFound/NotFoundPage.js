@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ROOT } from '../../../api/CONSTANTS';
+import { Link } from "react-router-dom";
+
+import { ROOT } from "../../../api";
 
 const NotFoundPage = () => {
   return (

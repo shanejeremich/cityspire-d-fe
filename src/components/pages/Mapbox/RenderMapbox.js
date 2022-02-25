@@ -1,5 +1,3 @@
-import React from 'react';
-
 function RenderMapbox({ mapContainerRef }) {
   return (
     <div>

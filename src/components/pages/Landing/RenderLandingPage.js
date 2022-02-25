@@ -1,11 +1,12 @@
-import React from 'react';
-import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearchLocation } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './RenderLandingPage.css';
-import { MAP } from '../../../api/CONSTANTS';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearchLocation } from "@fortawesome/free-solid-svg-icons";
+
+import { MAP } from "../../../api";
+
+import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
+import "./RenderLandingPage.css";
 
 function RenderLandingPage() {
   return (

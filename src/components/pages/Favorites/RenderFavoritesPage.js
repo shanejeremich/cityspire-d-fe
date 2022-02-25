@@ -1,24 +1,13 @@
-import React from 'react';
+import "./Favorites.css";
 
-import './Favorites.css';
-
-function RenderFavoritesPage({
-  userLocations,
-  locations,
-  isShown,
-  setIsShown,
-}) {
+function RenderFavoritesPage({ userLocations, locations, isShown, setIsShown }) {
   return (
     <>
       {userLocations ? (
         <div className="favorite">
           {userLocations.map(location => (
             <div key={location.id}>
-              <h3
-                className="cities"
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
-              >
+              <h3 className="cities" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
                 {location.city}
               </h3>
               {isShown && (

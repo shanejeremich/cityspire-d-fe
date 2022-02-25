@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { ROOT } from '../../../api/CONSTANTS';
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+import { ROOT } from "../../../api";
 
 const RenderProfileListPage = props => (
   <div>

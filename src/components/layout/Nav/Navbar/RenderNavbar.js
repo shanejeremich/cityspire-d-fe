@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { LOGIN, ROOT } from '../../../../api/CONSTANTS';
+import { Link } from "react-router-dom";
 
-import citySpire from '../../../../images/cityspire.svg';
-import { DropdownMenu } from '../../Nav';
+import { DropdownMenu } from "../../Nav";
+import citySpire from "../../../../images/cityspire.svg";
+
+import { LOGIN, ROOT } from "../../../../api";
 
 function RenderNavBar({ authState, userInfo, userPic, logout }) {
   return (
@@ -15,23 +15,18 @@ function RenderNavBar({ authState, userInfo, userPic, logout }) {
       </Link>
 
       <div className="button-container">
-        {!authState.isPending && !authState.isAuthenticated && (
-          <Link to={LOGIN}>
-            <button>login</button>
-          </Link>
-        )}
-        {!authState.isPending && !authState.isAuthenticated && (
+        {/* {!authState.isPending && !authState.isAuthenticated && ( */}
+        <Link to={LOGIN}>
+          <button>login</button>
+        </Link>
+        {/* )} */}
+        {/* {!authState.isPending && !authState.isAuthenticated && (
           <Link to="#">
             <button>Sign Up</button>
           </Link>
-        )}
+        )} */}
 
-        <DropdownMenu
-          authState={authState}
-          userInfo={userInfo}
-          userPic={userPic}
-          logout={logout}
-        />
+        <DropdownMenu authState={authState} userInfo={userInfo} userPic={userPic} logout={logout} />
       </div>
     </nav>
   );

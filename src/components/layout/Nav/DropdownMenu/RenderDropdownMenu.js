@@ -1,22 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHeart,
-  faSignOutAlt,
-  faUserCircle,
-  faSearchLocation,
-} from '@fortawesome/free-solid-svg-icons';
-import { FAVORITES, HOME, MAP } from '../../../../api/CONSTANTS';
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faSignOutAlt, faUserCircle, faSearchLocation } from "@fortawesome/free-solid-svg-icons";
 
-function RenderDropdownMenu({
-  userInfo,
-  userPic,
-  logout,
-  activeClick,
-  isActive,
-  dropdownRef,
-}) {
+import { FAVORITES, HOME, MAP } from "../../../../api";
+
+function RenderDropdownMenu({ userInfo, userPic, logout, activeClick, isActive, dropdownRef }) {
   return (
     <>
       {userInfo ? (
@@ -25,10 +13,7 @@ function RenderDropdownMenu({
             <span>{userInfo.name}</span>
             <img src={userPic} alt="user pic" className="user-pic" />
           </button>
-          <div
-            ref={dropdownRef}
-            className={`menu ${isActive ? 'active' : 'inactive'}`}
-          >
+          <div ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
             <ul>
               <li>
                 <Link to={MAP} className="menu-item" onClick={activeClick}>
@@ -43,11 +28,7 @@ function RenderDropdownMenu({
                 </Link>
               </li>
               <li>
-                <Link
-                  to={FAVORITES}
-                  className="menu-item"
-                  onClick={activeClick}
-                >
+                <Link to={FAVORITES} className="menu-item" onClick={activeClick}>
                   <FontAwesomeIcon icon={faHeart} />
                   &nbsp;&nbsp; Favorites
                 </Link>
@@ -62,7 +43,7 @@ function RenderDropdownMenu({
           </div>
         </div>
       ) : (
-        ''
+        ""
       )}
     </>
   );

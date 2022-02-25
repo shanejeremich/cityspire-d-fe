@@ -1,37 +1,33 @@
-import React from 'react';
-import { useOktaAuth } from '@okta/okta-react';
+import { PROFILES, mainAxios } from "../../../api";
 
-import { mainAxios } from '../../../api';
-import { PROFILES } from '../../../api/CONSTANTS';
+import { List } from "../../common";
 
-import { List } from '../../common';
-
-import RenderProfileListPage from './RenderProfileListPage';
+import RenderProfileListPage from "./RenderProfileListPage";
 
 // Here is an example of using our reusable List component to display some list data to the UI.
 const ProfileList = () => {
-  const { authState } = useOktaAuth();
+  // const getAuthHeader = authState => {
+  //   if (!authState.isAuthenticated) {
+  //     throw new Error("Not authenticated");
+  //   }
+  //   return { Authorization: `Bearer ${authState.idToken}` };
+  // };
 
-  const getAuthHeader = authState => {
-    if (!authState.isAuthenticated) {
-      throw new Error('Not authenticated');
-    }
-    return { Authorization: `Bearer ${authState.idToken}` };
-  };
-  const apiAuthGet = authHeader => {
-    return mainAxios.get(PROFILES, { headers: authHeader });
-  };
-  const getProfileData = async authState => {
-    try {
-      const response = await apiAuthGet(getAuthHeader(authState));
-      return response.data;
-    } catch (error) {
-      return new Promise(() => {
-        console.log(error);
-        return [];
-      });
-    }
-  };
+  // const apiAuthGet = authHeader => {
+  //   return mainAxios.get(PROFILES, { headers: authHeader });
+  // };
+
+  // const getProfileData = async authState => {
+  //   try {
+  //     const response = await apiAuthGet(getAuthHeader(authState));
+  //     return response.data;
+  //   } catch (error) {
+  //     return new Promise(() => {
+  //       console.log(error);
+  //       return [];
+  //     });
+  //   }
+  // };
 
   return (
     <List
