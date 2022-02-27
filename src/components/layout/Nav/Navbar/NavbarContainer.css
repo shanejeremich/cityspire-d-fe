@@ -25,15 +25,14 @@ nav button:nth-child(1) {
 
 .logo {
   margin-left: 25px;
-  width: 20vw;
 }
 
 .logo img {
-  max-width: 100%;
-  height: auto;
+  max-height: 5rem;
 }
 
 .user-pic {
   border: 1px solid #000;
   border-radius: 25px;
+  width: 2.5rem;
 }

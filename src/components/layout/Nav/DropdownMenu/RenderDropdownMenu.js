@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faSignOutAlt, faUserCircle, faSearchLocation } from "@fortawesome/free-solid-svg-icons";
 
 import { FAVORITES, HOME, MAP } from "../../../../api";
 
-function RenderDropdownMenu({ userInfo, userPic, logout, activeClick, isActive, dropdownRef }) {
+function RenderDropdownMenu({ userPic, activeClick, isActive, dropdownRef }) {
+  const { user, logout } = useAuth0();
   return (
     <>
-      {userInfo ? (
+      {user ? (
         <div className="menu-container">
           <button onClick={activeClick} className="menu-trigger">
-            <span>{userInfo.name}</span>
-            <img src={userPic} alt="user pic" className="user-pic" />
+            <span>{user.name}</span>
+            <img src={user.picture || userPic} alt="user pic" className="user-pic" />
           </button>
           <div ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
             <ul>
